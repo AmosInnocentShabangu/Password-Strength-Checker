@@ -20,6 +20,43 @@ password length and complexity.
 
 ### Script
 
+```bash
+
+#!/bin/bash
+
+read -sp "Enter a password to check: " PASSWORD
+echo
+
+LENGTH=${#PASSWORD}
+
+if [ $LENGTH -lt 8 ]; then
+    echo "❌ Weak password: Less than 8 characters"
+    exit 1
+fi
+
+if [[ ! $PASSWORD =~ [A-Z] ]]; then
+    echo "❌ Weak password: No uppercase letter"
+    exit 1
+fi
+
+if [[ ! $PASSWORD =~ [a-z] ]]; then
+    echo "❌ Weak password: No lowercase letter"
+    exit 1
+fi
+
+if [[ ! $PASSWORD =~ [0-9] ]]; then
+    echo "❌ Weak password: No number"
+    exit 1
+fi
+
+if [[ ! $PASSWORD =~ [\!\@\#\$\%\^\&\*\(\)_\+] ]]; then
+    echo "❌ Weak password: No special character"
+    exit 1
+fi
+
+echo "✅ Strong password"
+
+```
 [password_checker.sh](https://github.com/user-attachments/files/24787157/password_checker.sh)
 
 ### Screenshots
@@ -76,6 +113,41 @@ It is intended for educational purposes only.
 ---
 
 ### Script
+
+```Python
+
+import re
+import getpass
+
+print("Password Strength Checker\n")
+
+password = getpass.getpass("Enter a password: ")
+
+errors = []
+
+if len(password) < 8:
+    errors.append("Password must be at least 8 characters long")
+
+if not re.search(r"[A-Z]", password):
+    errors.append("Password must contain at least one uppercase letter")
+
+if not re.search(r"[a-z]", password):
+    errors.append("Password must contain at least one lowercase letter")
+
+if not re.search(r"[0-9]", password):
+    errors.append("Password must contain at least one number")
+
+if not re.search(r"[!@#$%^&*()_+]", password):
+    errors.append("Password must contain at least one special character")
+
+if errors:
+    print("\n❌ Weak password:")
+    for error in errors:
+        print("-", error)
+else:
+    print("\n✅ Strong password")
+
+```
 [password_checker.py](https://github.com/user-attachments/files/24787229/password_checker.py)
 
 ### Screenshots
