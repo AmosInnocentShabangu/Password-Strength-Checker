@@ -29,9 +29,10 @@ password length and complexity.
 
 
 ## How to Run
-``bash
+```bash
 chmod +x password_checker.sh
 ./password_checker.sh
+````
 
 ### Example Output
 
@@ -90,7 +91,7 @@ It is intended for educational purposes only.
 ## How to Run
 ```bash
 python3 password_checker.py
-
+____________________________________________________________________________________________________________________________________
 Disclaimer
 
 This script was tested in a controlled lab environment and
