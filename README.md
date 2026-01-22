@@ -79,8 +79,6 @@ It is intended for educational purposes only.
 <img width="1366" height="768" alt="pcp1" src="https://github.com/user-attachments/assets/007d5c9f-7588-4b34-960b-13692c5d84b0" />
 
 ## How to Run
-``bash
-python3 password_checker.py
 
 ### Skills Demonstrated
 
@@ -89,7 +87,11 @@ python3 password_checker.py
 - Input handling
 - Security best practices
 
-```Disclaimer
+## How to Run
+```bash
+python3 password_checker.py
+
+Disclaimer
 
 This script was tested in a controlled lab environment and
 is for educational use only.
