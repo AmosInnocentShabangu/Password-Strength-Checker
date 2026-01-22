@@ -32,6 +32,11 @@ password length and complexity.
 ```bash
 chmod +x password_checker.sh
 ./password_checker.sh
+
+Disclaimer
+
+This script was tested in a controlled lab environment and
+is for educational use only.
 ````
 
 ### Example Output
